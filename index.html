@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Zespoły</legend>
+        <label for="gosp"
+          >Gospodarze:
+          <select name="gosp" id="gosp">
+            <option value="Brazylia">Brazylia</option>
+            <option value="Argentyna">Argentyna</option>
+            <option value="Meksyk">Meksyk</option>
+          </select>
+        </label>
+        <label for="gosc"
+          >Goście:
+          <select name="gosc" id="gosc">
+            <option value="Polska">Polska</option>
+            <option value="Niemncy">Niemncy</option>
+            <option value="Hiszpania">Hiszpania</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Czy była dogrywka?</legend>
+        <label for="dogrTak"
+          >Tak
+          <input type="radio" name="dogr" id="dogrTak" value="yes" />
+        </label>
+        <label for="dogrNie"
+          >Nie
+          <input type="radio" name="dogr" id="dogrNie" value="no" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Dodatkowe informacje</legend>
+        <label for="YellowCard"
+          >Zółta kartka
+          <input
+            type="checkbox"
+            name="dod"
+            id="YellowCard"
+            value="YellowCard"
+          />
+        </label>
+        <label for="RedCard"
+          >Czerwona kartka
+          <input type="checkbox" name="dod" id="RedCard" value="RedCard" />
+        </label>
+        <label for="Penalty"
+          >Rzut karny
+          <input type="checkbox" name="dod" id="Penalty" value="Penalty" />
+        </label>
+      </fieldset>
+      <input type="submit" id="submit" />
+    </form>
+    <div class="display" id="display"></div>
+  </body>
+</html>

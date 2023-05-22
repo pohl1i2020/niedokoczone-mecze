@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dodawanie i stylizacja elementów</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="#">
+        <fieldset>
+          <legend>Podstawowe dane</legend>
+          <label for="elementType"
+            >Nazwa elementu:
+            <select id="elementType">
+              <optgroup label="podstawowe">
+                <option value="p">p</option>
+                <option value="h1">h1</option>
+                <option value="h2">h2</option>
+                <option value="h3">h3</option>
+                <option value="h4">h4</option>
+                <option value="h5">h5</option>
+                <option value="h6">h6</option>
+              </optgroup>
+              <optgroup label="znaczniki sekcji">
+                <option value="div">div</option>
+                <option value="header" selected>header</option>
+                <option value="main">main</option>
+                <option value="aside">aside</option>
+                <option value="section">section</option>
+                <option value="article">article</option>
+                <option value="footer">footer</option>
+              </optgroup>
+            </select></label
+          >
+
+          <label for="elementText"
+            >Tekst w elemencie:
+            <input
+              type="text"
+              id="elementText"
+              name="elementText"
+              placeholder="Wpisz tekst"
+              required
+          /></label>
+
+          <label for="elementDate"
+            >Data w elemencie:
+            <input type="date" id="elementDate" value="2002-02-01"
+          /></label>
+        </fieldset>
+        <fieldset>
+          <legend>Formatowanie bloku</legend>
+          <label for="elementPadding"
+            >Padding w elemencie: 0rem
+            <input
+              type="range"
+              id="elementPadding"
+              min="0"
+              max="1"
+              step="0.2"
+            />
+            1rem</label
+          >
+          <label for="elementMargin"
+            >Margines elementu: 0rem
+            <input
+              type="range"
+              id="elementMargin"
+              min="0"
+              max="1"
+              step="0.2"
+              value="0"
+            />
+            1rem</label
+          >
+        </fieldset>
+
+        <fieldset>
+          <legend>Kolory</legend>
+          <label for="elementColor"
+            >Kolor czcionki: <input type="color" id="elementColor"
+          /></label>
+          <label for="elementBGColor"
+            >Kolor tła elementu:
+            <input type="color" id="elementBGColor" value="#c9d9f8"
+          /></label>
+        </fieldset>
+        <fieldset>
+          <legend>Formatowanie tekstu</legend>
+
+          <fieldset>
+            <legend>Odległość między literami (rem):</legend>
+            <input
+              type="number"
+              id="elementLetterSpacing"
+              min="0"
+              max="1"
+              step="0.1"
+              value="0.5"
+            />
+            rem
+          </fieldset>
+          <fieldset>
+            <legend>wyrównanie tekstu</legend>
+            <label for="textAlignL"
+              >lewa:
+              <input
+                type="radio"
+                name="textAlign"
+                id="textAlignL"
+                value="left" /></label
+            ><label for="textAlignC"
+              >środek:
+              <input
+                type="radio"
+                name="textAlign"
+                id="textAlignC"
+                value="center"
+                checked /></label
+            ><label for="textAlignR"
+              >prawa:
+              <input
+                type="radio"
+                name="textAlign"
+                id="textAlignR"
+                value="right"
+            /></label>
+          </fieldset>
+          <fieldset>
+            <legend>dekoracja tekstu</legend>
+            <label for="textUnderline"
+              >podkreślenie:
+              <input
+                type="checkbox"
+                name="textDecoration"
+                id="textUnderline"
+                value="underline" /></label
+            ><label for="textLineTrough"
+              >przekreślenie:
+              <input
+                type="checkbox"
+                name="textDecoration"
+                id="textLineTrough"
+                value="line-through"
+                checked /></label
+            ><label for="textOverline"
+              >nadkreślenie:
+              <input
+                type="checkbox"
+                name="textDecoration"
+                id="textOverline"
+                value="overline"
+            /></label>
+          </fieldset>
+        </fieldset>
+        <input type="reset" value="odśnież" />
+        <input type="submit" value="poszło" id="submit" />
+      </form>
+      <div class="display" id="display"></div>
+    </div>
+  </body>
+</html>
